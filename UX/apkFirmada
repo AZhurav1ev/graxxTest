@@ -1,0 +1,11 @@
+
+en directorio  UX: cordova build --release android
+
+ir al directorio "UX/platforms/android/app/build/outputs/apk/release$"
+
+como ya esta la llave generada realizar lo siguiente:
+
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore gpax_mobile.keystore release/app-release-unsigned.apk gpaxMobile
+
+/home/williamre/Android/Sdk/build-tools/30.0.0-rc1/zipalign -v 4 app-release-unsigned.apk gpax.apk

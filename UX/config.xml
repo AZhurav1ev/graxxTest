@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.gpax" version="1.0.0" 
+    xmlns="http://www.w3.org/ns/widgets" 
+    xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>GPAX</name>
+    <description>
+        Gpax Cordova application.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <!-- Plugins -->
+
+    <!-- Core plugins -->
+    <plugin name="cordova-plugin-media-capture" />
+    <plugin name="cordova-plugin-dialogs" />
+    <plugin name="cordova-plugin-file" />
+    <plugin name="cordova-plugin-file-transfer" />
+    <plugin name="cordova-plugin-camera" />
+    <plugin name="cordova-plugin-audio-recorder" />
+    <plugin name="cordova-plugin-file-opener2" spec="^3.0.0">
+        <variable name="ANDROID_SUPPORT_V4_VERSION" value="27.+" />
+    </plugin>
+    <plugin name="cordova-plugin-gallery-refresh" />
+    <plugin name="cordova-plugin-splashscreen" />
+    <plugin name="cordova-plugin-device" />
+    <plugin name="cordova-plugin-vibration" />
+    <plugin name="cordova-plugin-background-mode" />
+    <plugin name="cordova-plugin-inappbrowser" />
+    <plugin name="https://github.com/katzer/cordova-plugin-local-notifications.git" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+
+    <!-- all platforms -->
+    <preference name="phonegap-version" value="cli-9.0.0" />
+
+
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon src="www/res/screen/android/icon.png"/>
+
+    <!-- Android only -->
+    <preference name="android-minSdkVersion" value="20" />
+    <preference name="android-maxSdkVersion" value="20" />
+    <preference name="android-targetSdkVersion" value="20" />
+
+    <platform name="android">
+        <resource-file src="www/res/iconoti.png" target="app/src/main/res/drawable-hdpi/icon.png"/>
+        <allow-intent href="market:*" />
+        <splash src="www/res/screen/android/login.png"/>
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <splash src="www/res/screen/android/login.png"/>
+    </platform>
+</widget>
